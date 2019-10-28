@@ -28,7 +28,7 @@ namespace SalesWebMvc.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken] //Segurança, previnir ataques de seção
+        [ValidateAntiForgeryToken] //Segurança, previnir ataques de seção (CSRF)
         public IActionResult Create(Seller seller)
         {
             _sellerService.Insert(seller);
